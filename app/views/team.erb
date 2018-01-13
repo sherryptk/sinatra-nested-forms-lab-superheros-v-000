@@ -9,7 +9,16 @@
     <h1><%= @team_name %></h1>
     <h2>Team Motto: <%= @team_motto %></h2>
 
-    <h2>Hero Name: <%= @hero_name %></h2>
+    <% @team_members.each.with_index do |hero, index| %>
+      <h2>Hero Name: <%= @hero_name[index] %></h2>
+      <p>
+        Hero power: <%= @hero_power[index] %>
+        <br>
+        Hero biography: <%= @hero_bio[index] %>
+      </p>
+    <% end %>
+
+    <!-- <h2>Hero Name: <%= @hero_name %></h2>
     <p>Hero Power: <%= @hero_power %></p>
     <p>Hero Biography: <%= @hero_bio %></p>
 
@@ -19,7 +28,7 @@
 
     <h2>Hero Name: <%= @hero_name3 %></h2>
     <p>Hero Power: <%= @hero_power3 %></p>
-    <p>Hero Biography: <%= @hero_bio3 %></p>
+    <p>Hero Biography: <%= @hero_bio3 %></p> -->
 
   </body>
 </html>
